@@ -1,0 +1,1 @@
+console.log(isNaN(Number('a1.23')))
