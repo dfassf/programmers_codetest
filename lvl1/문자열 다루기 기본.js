@@ -1,8 +1,6 @@
 function solution(s) {
-	const len = s.length
-
-	if(len === 4 || len === 6){
-		return s.split("").every((c)=>!isNaN(c))
+	if(s.length === 4 || s.length === 6){
+		return s.split("").every((x)=>!isNaN(x))
 	}
 
 	return false
