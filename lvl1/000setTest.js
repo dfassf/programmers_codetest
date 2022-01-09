@@ -1,0 +1,7 @@
+let asd = new Set()
+asd.add('11')
+asd.add('22')
+asd.add('33')
+asd.add('44')
+asd.add('11')
+console.log(asd)
