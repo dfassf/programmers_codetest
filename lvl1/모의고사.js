@@ -28,17 +28,11 @@ function first(n){
 
 function second(n){
     let arr = []
-    let num = [1,3,4]
+    let num = [2, 1, 2, 3, 2, 4, 2, 5]
     let i = 0
-    let k = 0
     while(arr.length<n){
-        if(i%2 == 0){
-            arr.push(2)
-        } else{
-            if(k ==3){k=1}
-            arr.push(num[k])
-            k++
-        }
+        if(i == 8){i = 0}
+        arr.push(num[i])
         i++
     }
     return arr
@@ -46,11 +40,10 @@ function second(n){
 
 function third(n){
     let arr = []
-    let num = [3,1,2,4,5]
+    let num = [3,3,1,1,2,2,4,4,5,5]
     let i = 0
     while(arr.length<n){
-        if(i == 5){i = 0}
-        arr.push(num[i])
+        if(i == 10){i = 0}
         arr.push(num[i])
         i++
     }
