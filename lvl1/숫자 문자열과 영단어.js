@@ -8,5 +8,5 @@ function solution(s) {
     }
     var answer = Number(s);
     console.log(answer)
-    return answer;
+    return answer
 }
