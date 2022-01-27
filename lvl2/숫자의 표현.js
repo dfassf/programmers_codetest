@@ -3,7 +3,6 @@ function solution(n){
     let check = (input1, input2) => {
         let checkNum = input1
         let k = input2
-        // checknum = 15, k = 15
         let number = 0
         let ganung = false
         while(number+k<=checkNum){
@@ -13,13 +12,11 @@ function solution(n){
             number += k
             k++
             if(number+k==checkNum){
-                // console.log('잘됨') 
                 number += k
                 k++
                 ganung = true
                 return true
             } else if(number+k>checkNum){
-                // console.log('안됨')
                 return false
             }
         }
