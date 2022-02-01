@@ -7,8 +7,16 @@ function solution(fees, records) {
     })
     let bigArr = new Array
     let i = 0
+    let arr = new Array
     while(true){
-        
+        let first = sortRecords.pop()
+        console.log(first.substr(6,5),sortRecords[i].substr(6,5))
+        if(first.substr(6,5)==sortRecords[i].substr(6,5)){
+            arr.push(sortRecords[i])
+            sortRecords.splice(1,i)
+        }
+        console.log(arr)
+        break
     }
 
 }
