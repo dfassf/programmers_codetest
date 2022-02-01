@@ -7,7 +7,9 @@ function solution(fees, records) {
     })
     let bigArr = new Array
     let i = 0
-
+    while(true){
+        
+    }
 
 }
 
