@@ -15,7 +15,7 @@ function solution(fees, records) {
             arr.push(sortRecords[i])
             sortRecords.splice(1,i)
         }
-        console.log(arr)
+        // console.log(arr)
         break
     }
 
