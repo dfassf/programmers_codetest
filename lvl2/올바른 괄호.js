@@ -1,18 +1,17 @@
 function solution(s){
     let arr = s.split('')
-    let leftCnt = 0 // (
-    let rightCnt = 0 // )
+    let cnt = 0 
     if(arr[0]==')'){console.log('nope');return false}
     else{
-        leftCnt ++
+        cnt ++
         for(let i =1; i<arr.length; i++){
             // arr[0]이 (
-                if(arr[i]=='('){leftCnt ++}
-                if(arr[i]==')'){rightCnt ++}
+                if(arr[i]=='('){cnt ++}
+                else if(arr[i]==')' && cnt>=0){cnt --}
         }
     }
-    if(leftCnt== rightCnt){return true}
-    else{return false}
+    if(cnt == 0){console.log('트루');return true}
+    else{console.log('폴스');return false}
 }
 
-solution("(()(")
+solution("()))((()")
