@@ -8,17 +8,50 @@ function solution(fees, records) {
     let bigArr = new Array
     let i = 0
     let arr = new Array
-    while(true){
-        let first = sortRecords.pop()
-        console.log(first.substr(6,5),sortRecords[i].substr(6,5))
-        if(first.substr(6,5)==sortRecords[i].substr(6,5)){
-            arr.push(sortRecords[i])
-            sortRecords.splice(1,i)
-        }
-        // console.log(arr)
-        break
-    }
 
+    while(true){
+        let id = sortRecords[0].split('').splice(6,4).join('')
+        let hour = Number(sortRecords[0].split('').splice(0,2).join(''))
+        let min
+        Number(sortRecords[0].split('').splice(3,2).join(''))==0 
+        ? min = 60 
+        : min = Number(sortRecords[0].split('').splice(3,2).join(''))
+        let status = sortRecords[0].split('').splice(-1)
+        let data = {id, hour, min, status}
+        if(bigArr.length==0){
+            arr.push(data)
+            sortRecords.shift()
+        }
+        if(sortRecords.length>1){
+            if(arr[0].id==sortRecords[0].substr(6,5)){
+                arr.push(data)
+                sortRecords.splice(0,1)
+            } else{
+                bigArr.push(arr)
+                arr = []
+                arr.push(data)
+            }
+            console.log('z')
+        } else{
+            arr.push(data)
+            bigArr.push(arr)
+            break
+        }
+    }
+    // console.log(bigArr)
+
+    // for(let i = 0; i<bigArr.length; i++){
+    //     // 각 차번호에 대한 계산이 들어감
+    //     let time = new Array
+    //     for(let j = 0; j<bigArr[i].length; j++){
+    //         let hour = 
+    //         let min 
+
+    //         time.push({hour, min})
+            
+    //     }
+    //     console.log(time)
+    // }
 }
 
 solution([180, 5000, 10, 600],[
