@@ -31,7 +31,6 @@ function solution(fees, records) {
                 arr = []
                 arr.push(data)
             }
-            console.log('z')
         } else{
             arr.push(data)
             bigArr.push(arr)
