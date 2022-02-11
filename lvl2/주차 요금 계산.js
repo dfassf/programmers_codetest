@@ -37,7 +37,7 @@ function solution(fees, records) {
             break
         }
     }
-    console.log(bigArr)
+    // console.log(bigArr)
 
     // for(let i = 0; i<bigArr.length; i++){
     //     // 각 차번호에 대한 계산이 들어감
